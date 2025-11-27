@@ -1,0 +1,129 @@
+{
+  "welcome": "Bienvenue",
+  "language": "Langue",
+  "nav": {
+    "home": "Accueil",
+    "company": "La Compagnie",
+    "shows": "Spectacles",
+    "agenda": "Agenda",
+    "news": "Actualités",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Cie des Oreilles",
+    "subtitle": "\"Oyez, oyez ! Entrez dans la danse des marionnettes et des contes d'antan.\"",
+    "discover_shows": "Découvrir nos Spectacles",
+    "view_agenda": "Voir l'Agenda"
+  },
+  "footer": {
+    "company_desc": "Théâtre de marionnettes et contes.\nUn univers médiéval et poétique pour petits et grands.",
+    "company_name": "Cie des Oreilles",
+    "contact_title": "Contact",
+    "follow_us": "Suivez-nous",
+    "rights_reserved": "Cie des Oreilles. Tous droits réservés."
+  },
+  "home": {
+    "latest_news": "Dernières Actualités",
+    "no_news": "Les nouvelles arrivent bientôt...",
+    "all_news": "Toutes les actualités"
+  },
+  "about": {
+    "title": "La Compagnie",
+    "p1": "La {company} est née d'une passion pour les histoires qui se racontent au coin du feu, pour les marionnettes qui prennent vie et pour l'univers fascinant du Moyen Âge.",
+    "p2": "Spécialisée dans l'adaptation du {work}, la compagnie propose des spectacles vivants, interactifs et musicaux, où la ruse du goupil côtoie la bêtise du loup Ysengrin.",
+    "p3": "Nous parcourons les routes de France, de châteaux en festivals, pour émerveiller petits et grands.",
+    "learn_more": "En savoir plus"
+  },
+  "news": {
+    "read_more": "Lire la suite",
+    "title": "Actualités",
+    "error": "Une erreur est survenue lors du chargement des actualités.",
+    "empty": "Aucune actualité pour le moment.",
+    "back": "Retour aux actualités"
+  },
+  "shows": {
+    "discover": "Découvrir",
+    "title": "Nos Spectacles",
+    "error": "Une erreur est survenue lors du chargement des spectacles.",
+    "empty": "Aucun spectacle pour le moment.",
+    "back": "Retour aux spectacles",
+    "next_dates": "Prochaines dates",
+    "contact_us": "Nous contacter pour ce spectacle"
+  },
+  "agenda": {
+    "title": "Agenda",
+    "error": "Une erreur est survenue lors du chargement de l'agenda.",
+    "book": "Réserver",
+    "more_info": "Plus d'infos",
+    "empty": "Aucune date prévue pour le moment."
+  },
+  "company": {
+    "title": "La Compagnie des Oreilles",
+    "subtitle": "Artisans de l'imaginaire",
+    "history_title": "Notre Histoire",
+    "history_p1": "Fondée en 2010, la Compagnie des Oreilles s'est donnée pour mission de redonner vie aux textes anciens à travers l'art de la marionnette.",
+    "history_p2": "Tout a commencé dans un petit atelier, avec quelques bouts de bois et de tissus. Aujourd'hui, la compagnie compte plusieurs spectacles à son actif et sillonne les routes pour partager sa passion.",
+    "history_p3": "Nous croyons en un théâtre populaire, exigeant et accessible à tous, où le rire et l'émotion se côtoient."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "intro": "Pour toute demande de spectacle, de devis ou d'information, n'hésitez pas à nous écrire.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer"
+    },
+    "success": "Votre message a bien été envoyé ! Nous vous répondrons dans les plus brefs délais.",
+    "validation": {
+      "name_required": "Le nom est requis",
+      "email_invalid": "Adresse email invalide",
+      "message_min": "Le message doit contenir au moins 10 caractères"
+    }
+  },
+  "admin": {
+    "panel_title": "Panneau d'administration",
+    "company_name": "Cie des Oreilles",
+    "dashboard": "Tableau de bord",
+    "news": "Actualités",
+    "view_site": "Voir le site",
+    "logout": "Déconnexion",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "new_news": "Nouvelle actualité",
+    "login_title": "Administration",
+    "manage": "Gérer",
+    "soon": "Bientôt",
+    "validation": {
+      "email_invalid": "Adresse email invalide",
+      "password_min": "Le mot de passe doit contenir au moins 6 caractères",
+      "title_required": "Le titre est requis"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Accueil",
+      "description": "Bienvenue sur le site de la Compagnie des Oreilles. Découvrez nos spectacles, notre agenda et nos actualités."
+    },
+    "company": {
+      "title": "La Compagnie",
+      "description": "Découvrez l'histoire et la mission de la Compagnie des Oreilles."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contactez la Compagnie des Oreilles pour toute demande d'information ou de réservation."
+    },
+    "agenda": {
+      "title": "Agenda",
+      "description": "Retrouvez toutes les dates de spectacles de la Compagnie des Oreilles."
+    },
+    "news": {
+      "title": "Actualités",
+      "description": "Suivez les dernières actualités de la Compagnie des Oreilles."
+    },
+    "shows": {
+      "title": "Spectacles",
+      "description": "Découvrez les spectacles de la Compagnie des Oreilles."
+    }
+  }
+}

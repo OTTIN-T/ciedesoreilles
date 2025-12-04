@@ -8,7 +8,7 @@ async function handleLogout() {
 </script>
 
 <template>
-  <div class="min-h-screen flex bg-neutral-50 font-sans text-neutral-900">
+  <div class="min-h-screen flex bg-neutral-50  text-neutral-900">
     <!-- Sidebar -->
     <aside class="w-64 bg-white border-r border-neutral-200 flex flex-col shadow-sm z-10">
       <div class="p-6 border-b border-neutral-100">

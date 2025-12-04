@@ -29,12 +29,12 @@ definePageMeta({
         </template>
       </UCard>
 
-      <!-- Placeholder for Shows management -->
-      <UCard class="ring-1 ring-neutral-200 shadow-sm opacity-60">
+      <!-- Shows management -->
+      <UCard class="ring-1 ring-neutral-200 shadow-sm">
         <template #header>
           <div class="flex items-center gap-3">
             <div class="p-2 bg-neutral-100 rounded-lg">
-              <UIcon name="i-heroicons-ticket" class="text-xl text-neutral-500" />
+              <UIcon name="i-heroicons-ticket" class="text-xl text-neutral-700" />
             </div>
             <h3 class="font-semibold text-neutral-900">
               {{ $t('nav.shows') }}
@@ -42,11 +42,11 @@ definePageMeta({
           </div>
         </template>
         <p class="text-sm text-neutral-500 mb-6">
-          {{ $t('admin.soon') }}
+          Gérez les spectacles de la compagnie.
         </p>
         <template #footer>
-          <UButton disabled color="neutral" block variant="ghost">
-            {{ $t('admin.soon') }}
+          <UButton to="/admin/shows" color="neutral" block variant="solid">
+            {{ $t('admin.manage') }}
           </UButton>
         </template>
       </UCard>

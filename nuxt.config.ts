@@ -2,7 +2,6 @@
 import { defineOrganization } from 'nuxt-schema-org/schema'
 
 export default defineNuxtConfig({
-
   modules: [
     '@nuxt/eslint',
     '@nuxt/hints',
@@ -15,18 +14,65 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@vite-pwa/nuxt',
   ],
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+    timeline: {
+      enabled: true,
+    },
+  },
+  app: {
+    pageTransition: true,
+    layoutTransition: true,
+    head: {
+      charset: 'utf-16',
+      viewport: 'width=device-width,initial-scale=1,viewport-fit=cover',
+      title: 'Cie des Oreilles',
+      meta: [
+        {
+          name: 'description',
+          content: 'Site de la Compagnie des Oreilles',
+        },
+        {
+          name: 'theme-color',
+          content: '#ffffff',
+        },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
+        },
+        {
+          name: 'apple-mobile-web-app-title',
+          content: 'Cie des Oreilles',
+        },
+        {
+          name: 'mobile-web-app-capable',
+          content: 'yes',
+        },
+        {
+          name: 'apple-mobile-web-app-capable',
+          content: 'yes',
+        },
+        {
+          name: 'author',
+          content: 'Cie des Oreilles',
+        },
+      ],
+      link: [
+        {
+          rel: 'apple-touch-icon',
+          href: '/pwa/icons/maskable-icon-512x512.png',
+          sizes: '512x512',
+        },
+      ],
+    },
+    keepalive: true,
+  },
   css: ['~/assets/css/main.css'],
   site: {
     url: 'https://www.ciedesoreilles.fr',
     name: 'Cie des Oreilles',
     description: 'Site de la Compagnie des Oreilles',
     defaultLocale: 'fr',
-  },
-  ui: {
-    theme: {
-      colors: ['primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error', 'neutral', 'slate', 'admin'],
-    },
   },
   experimental: {
     viewTransition: true,
@@ -37,11 +83,105 @@ export default defineNuxtConfig({
     clientNodeCompat: true,
   },
   compatibilityDate: '2025-07-15',
+  nitro: {
+    compressPublicAssets: {
+      gzip: true,
+      brotli: true,
+    },
+    minify: true,
+    routeRules: {
+      '/__og-image__/**': { prerender: false },
+      '/_nuxt/**': {
+        prerender: true,
+        headers: {
+          'cache-control': 's-maxage=31536000, max-age=31536000',
+        },
+      },
+      '/': {
+        prerender: true,
+        cache: {
+          swr: true,
+          maxAge: 300,
+          staleMaxAge: 600,
+        },
+      },
+      '/shows/**': {
+        prerender: true,
+        cache: {
+          swr: true,
+          maxAge: 300,
+          staleMaxAge: 600,
+        },
+      },
+      '/news/**': {
+        prerender: true,
+        cache: {
+          swr: true,
+          maxAge: 300,
+          staleMaxAge: 600,
+        },
+      },
+      '/contact': {
+        prerender: true,
+        cache: {
+          swr: true,
+          maxAge: 300,
+          staleMaxAge: 600,
+        },
+      },
+      '/company': {
+        prerender: true,
+        cache: {
+          swr: true,
+          maxAge: 300,
+          staleMaxAge: 600,
+        },
+      },
+    },
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('@nuxt/ui')) {
+                return 'ui'
+              }
+              if (id.includes('vue')) {
+                return 'vue-framework'
+              }
+              if (id.includes('nuxt')) {
+                return 'nuxt-framework'
+              }
+            }
+          },
+        },
+      },
+    },
+  },
   eslint: {
     config: {
       stylistic: true,
       standalone: false,
     },
+  },
+  fonts: {
+    families: [
+      {
+        name: 'Lato',
+        display: 'swap',
+        preload: true,
+        global: true,
+        provider: 'google',
+        weights: [100, 300, 400, 700, 900],
+      },
+      {
+        name: 'Roboto',
+        provider: 'google',
+        weights: [400, 500, 700],
+      },
+    ],
   },
   i18n: {
     locales: [
@@ -58,6 +198,12 @@ export default defineNuxtConfig({
     },
   },
   pwa: {
+    devOptions: {
+      enabled: import.meta.env.PWA_ENABLED === 'true',
+      suppressWarnings: true,
+      type: 'module',
+      navigateFallbackAllowlist: [/^\/$/],
+    },
     registerType: 'autoUpdate',
     manifest: {
       id: '/',
@@ -234,12 +380,6 @@ export default defineNuxtConfig({
     },
     client: {
       installPrompt: true,
-    },
-    devOptions: {
-      enabled: true,
-      suppressWarnings: true,
-      navigateFallbackAllowlist: [/^\/$/],
-      type: 'module',
     },
   },
   schemaOrg: {

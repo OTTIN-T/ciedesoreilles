@@ -1,43 +1,51 @@
 <script setup lang="ts">
-import type { Database } from '~/types/database.types'
+import type { Database } from '~/types/database.types';
 
-defineProps<{
+const props = defineProps<{
   news: Database['public']['Tables']['news']['Row']
+  isLatest?: boolean
 }>()
+
+const { t } = useI18n()
+
+const badge = computed(() => {
+  const isRecent = (new Date().getTime() - new Date(props.news.created_at).getTime()) / (1000 * 3600 * 24) < 10
+
+  if (props.isLatest && isRecent) {
+    return {
+      label: t('common.new'),
+      color: 'primary' as const,
+    }
+  }
+  return {}
+})
 </script>
 
 <template>
-  <UCard
-    class="h-full flex flex-col hover:shadow-lg transition-shadow duration-300 borderprimary800 bgprimary900 ring-1 ringprimary800"
-  >
+  <UBlogPost variant="subtle" :to="`/news/${news.id}`" :badge="badge" :ui="{
+    description: 'pb-6',
+  }"
+    class="hover:scale-105 hover:shadow-lg hover:ring-primary-400 transition-all duration-300 bg-bg ring-1 ring-primary-800"
+    :date="news.created_at">
     <template #header>
-      <div class="relative h-48 -mx-6 -mt-6 mb-4 overflow-hidden rounded-t-lg">
-        <NuxtImg
-          :src="news.image_url || 'https://placehold.co/600x400/2c1810/d4af37?text=News'" :alt="news.title"
-          class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-        />
-      </div>
-      <h3 class="text-xl font-serif font-bold textprimary100 line-clamp-2">
+      <NuxtImg :src="news.image_url || 'https://placehold.co/600x400/2c1810/d4af37?text=News'" :alt="news.title"
+        class="w-full h-full object-cover" />
+    </template>
+    <template #title>
+      <span class="text-xl font-bold text-primary-100 ">
         {{ news.title }}
-      </h3>
+      </span>
     </template>
-
-    <p class="textprimary200 line-clamp-3 text-sm font-sans">
-      {{ news.content }}
-    </p>
-
+    <template #description>
+      <p class="text-md line-clamp-4">
+        {{ news.content }}
+      </p>
+    </template>
     <template #footer>
-      <div class="flex justify-between items-center mt-auto">
-        <span class="text-xs textprimary400 uppercase tracking-wider">
-          {{ new Date(news.created_at).toLocaleDateString('fr-FR') }}
-        </span>
-        <UButton
-          :to="`/news/${news.id}`" variant="link" color="primary"
-          class="textprimary300 hover:textprimary100 font-bold p-0"
-        >
-          {{ $t('news.read_more') }}
-        </UButton>
-      </div>
+      <UButton :to="`/news/${news.id}`" variant="link" color="primary"
+        class="text-primary-300 hover:text-primary-100 font-bold pl-6 pb-5" trailing-icon="i-heroicons-arrow-right">
+        {{ $t('news.read_more') }}
+      </UButton>
     </template>
-  </UCard>
+  </UBlogPost>
 </template>

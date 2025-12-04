@@ -53,10 +53,10 @@ useSeoMeta({
         <div class="absolute inset-0 bg-linear-to-t fromprimary950 viaprimary950/40 to-transparent" />
       </div>
       <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
-        <h1 class="text-5xl md:text-7xl font-serif font-bold mb-4 textprimary50 drop-shadow-xl">
+        <h1 class="text-5xl md:text-7xl  font-bold mb-4 textprimary50 drop-shadow-xl">
           {{ show.title }}
         </h1>
-        <p class="text-xl md:text-2xl font-sans font-light mb-8 textprimary200 drop-shadow-md">
+        <p class="text-xl md:text-2xl    mb-8 textprimary200 drop-shadow-md">
           {{
             show.description?.substring(0, 100) }}...
         </p>
@@ -68,7 +68,7 @@ useSeoMeta({
 
     <!-- Info Bar -->
     <div class="bgprimary900 border-y borderprimary800 py-4">
-      <div class="container mx-auto px-4 flex flex-wrap justify-center gap-8 textprimary300 font-sans">
+      <div class="container mx-auto px-4 flex flex-wrap justify-center gap-8 textprimary300  ">
         <div v-if="nextDate" class="flex items-center gap-2">
           <UIcon name="i-heroicons-calendar" class="w-5 h-5 text-primary-500" />
           <span>{{ $t('show.next_date') }}: {{ new Date(nextDate.date).toLocaleDateString('fr-FR', {
@@ -88,17 +88,17 @@ useSeoMeta({
         <!-- Main Content -->
         <div class="lg:col-span-2 space-y-12">
           <section>
-            <h2 class="text-3xl font-serif font-bold textprimary100 mb-6">
+            <h2 class="text-3xl  font-bold textprimary100 mb-6">
               {{ $t('show.about_title') }}
             </h2>
-            <div class="prose prose-lg prose-invert textprimary200 font-sans">
+            <div class="prose prose-lg prose-invert textprimary200  ">
               <p>{{ show.description }}</p>
             </div>
           </section>
 
           <!-- Gallery (Mock) -->
           <section>
-            <h2 class="text-3xl font-serif font-bold textprimary100 mb-6">
+            <h2 class="text-3xl  font-bold textprimary100 mb-6">
               {{ $t('show.gallery') }}
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -117,11 +117,11 @@ useSeoMeta({
         <!-- Sidebar -->
         <div class="space-y-8">
           <div class="bgprimary900 p-6 rounded-lg border borderprimary800 shadow-lg">
-            <h3 class="text-xl font-serif font-bold textprimary100 mb-6 border-b borderprimary800 pb-2">
+            <h3 class="text-xl  font-bold textprimary100 mb-6 border-b borderprimary800 pb-2">
               {{
                 $t('show.details') }}
             </h3>
-            <ul class="space-y-4 font-sans textprimary200">
+            <ul class="space-y-4  textprimary200">
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-clock" class="w-6 h-6 text-primary-500 shrink-0" />
                 <div>
@@ -152,7 +152,7 @@ useSeoMeta({
     <!-- Agenda Section -->
     <section id="tickets" class="py-16 bgprimary900 border-t borderprimary800">
       <div class="container mx-auto px-4 max-w-4xl">
-        <h2 class="text-3xl font-serif font-bold textprimary100 mb-8 text-center">
+        <h2 class="text-3xl  font-bold textprimary100 mb-8 text-center">
           {{ $t('show.upcoming_dates') }}
         </h2>
         <div class="space-y-4">
@@ -161,11 +161,11 @@ useSeoMeta({
             class="bgprimary950 border borderprimary800 p-6 rounded-lg flex flex-col md:flex-row justify-between items-center gap-4 hover:border-primary-500 transition-colors"
           >
             <div class="text-center md:text-left">
-              <div class="text-xl font-bold textprimary100 font-serif">
+              <div class="text-xl font-bold textprimary100  ">
                 {{ new Date(date.date).toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'long' })
                 }}
               </div>
-              <div class="textprimary400 font-sans">
+              <div class="textprimary400  ">
                 {{ new Date(date.date).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }) }}
               </div>
             </div>

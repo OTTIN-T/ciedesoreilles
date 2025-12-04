@@ -1,36 +1,57 @@
 <script setup lang="ts">
 import type { Database } from '~/types/database.types'
 
-defineProps<{
+const props = defineProps<{
   show: Database['public']['Tables']['shows']['Row']
 }>()
+const { t } = useI18n()
+
+const badge = computed(() => {
+  if (props.show.featured) {
+    return {
+      label: t('show.featured'),
+      color: 'primary' as const,
+    }
+  }
+
+  return {
+    label: props.show.audience || t('show.audience_value'),
+    color: 'secondary' as const,
+  }
+})
 </script>
 
 <template>
-  <div class="group relative overflow-hidden rounded-lg shadow-xl border borderprimary800 bgprimary900">
-    <NuxtImg
-      :src="show.image_url || 'https://placehold.co/600x800/2c1810/d4af37?text=Show'" :alt="show.title"
-      class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
-    />
-    <div
-      class="absolute inset-0 bg-linear-to-t fromprimary950 viaprimary950/60 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
-    >
-      <h3
-        class="text-2xl font-serif font-bold textprimary100 mb-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300"
-      >
+  <UBlogPost
+    variant="subtle" :to="`/shows/${show.slug}`" :badge="badge" :ui="{
+      description: 'h-40 pb-6',
+    }"
+    class="w-96 hover:scale-105 hover:shadow-lg  hover:ring-primary-400 transition-all duration-300 bg-bg ring-1 ring-primary-800 "
+  >
+    <template #header>
+      <NuxtImg
+        :src="show.image_url || 'https://placehold.co/600x400/2c1810/d4af37?text=News'" :alt="show.title"
+        class="w-full h-full object-cover" quality="80"
+      />
+      {{ show.featured }}
+    </template>
+    <template #title>
+      <span class="text-xl font-bold text-primary-100 ">
         {{ show.title }}
-      </h3>
-      <p
-        class="textprimary200 line-clamp-2 mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75 font-sans"
-      >
+      </span>
+    </template>
+    <template #description>
+      <p class="text-md line-clamp-4">
         {{ show.description }}
       </p>
+    </template>
+    <template #footer>
       <UButton
-        :to="`/shows/${show.slug}`" color="primary" variant="solid"
-        class="self-start transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-100 font-bold"
+        :to="`/shows/${show.slug}`" variant="link" color="primary"
+        class="text-primary-300 hover:text-primary-100 font-bold pl-6 pb-5" trailing-icon="i-heroicons-arrow-right"
       >
         {{ $t('shows.discover') }}
       </UButton>
-    </div>
-  </div>
+    </template>
+  </UBlogPost>
 </template>

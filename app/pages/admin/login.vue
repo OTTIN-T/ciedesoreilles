@@ -47,7 +47,7 @@ async function handleLogin(event: FormSubmitEvent<Schema>) {
 <template>
   <div class="min-h-screen flex items-center justify-center bg-admin-100">
     <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-xl border border-admin-200">
-      <h1 class="text-3xl font-serif font-bold text-admin-800 mb-6 text-center">
+      <h1 class="text-3xl  font-bold text-admin-800 mb-6 text-center">
         {{ $t('admin.login_title') }}
       </h1>
 

@@ -1,18 +1,23 @@
 {
   "welcome": "Welcome",
   "language": "Language",
+  "common": {
+    "new": "New"
+  },
   "nav": {
     "home": "Home",
     "company": "The Company",
     "shows": "Shows",
     "agenda": "Agenda",
     "news": "News",
-    "contact": "Contact"
+    "contact": "Contact",
+    "tickets": "Tickets"
   },
   "hero": {
     "title": "Cie des Oreilles",
     "subtitle": "\"Hear ye, hear ye! Enter the dance of puppets and tales of yore.\"",
     "discover_shows": "Discover our Shows",
+    "discover_show": "Discover the Show",
     "view_agenda": "View Agenda"
   },
   "footer": {
@@ -25,67 +30,132 @@
   "home": {
     "latest_news": "Latest News",
     "no_news": "News coming soon...",
-    "all_news": "All News"
+    "all_news": "All News",
+    "featured_show_title": "Featured Show",
+    "featured_show_subtitle": "Dive into the latest adventures.",
+    "book_tickets": "Book Tickets",
+    "other_creations_title": "Our Other Creations",
+    "other_creations_subtitle": "Discover other stories we have had the pleasure of telling.",
+    "latest_news_title": "Company News",
+    "latest_news_subtitle": "Stay informed about our latest adventures, tour dates, and backstage."
   },
   "about": {
     "title": "The Company",
-    "p1": "The {company} was born from a passion for stories told by the fireside, for puppets coming to life, and for the fascinating universe of the Middle Ages.",
-    "p2": "Specializing in the adaptation of the {work}, the company offers lively, interactive, and musical shows, where the fox's cunning meets the wolf Ysengrin's foolishness.",
-    "p3": "We travel the roads of France, from castles to festivals, to amaze young and old.",
+    "description": "Explore a world where medieval tales come to life through the magic of puppets. Our company is dedicated to reviving ancient stories for a modern audience.",
     "learn_more": "Learn more"
   },
-  "shows": {
-    "discover": "Discover",
-    "title": "Our Shows",
-    "error": "An error occurred while loading shows.",
-    "empty": "No shows for now.",
-    "back": "Back to shows",
-    "next_dates": "Upcoming dates",
-    "contact_us": "Contact us for this show"
-  },
-  "news": {
-    "read_more": "Read more",
-    "title": "News",
-    "error": "An error occurred while loading news.",
-    "empty": "No news for now.",
-    "back": "Back to news"
-  },
-  "admin": {
-    "panel_title": "Admin Panel",
-    "company_name": "Cie des Oreilles",
-    "dashboard": "Dashboard",
-    "news": "News",
-    "view_site": "View Site",
-    "logout": "Logout",
-    "cancel": "Cancel",
-    "save": "Save",
-    "new_news": "New News",
-    "login_title": "Administration",
-    "manage": "Manage",
-    "soon": "Coming soon",
-    "validation": {
-      "email_invalid": "Invalid email address",
-      "password_min": "Password must be at least 6 characters",
-      "title_required": "Title is required"
-    }
+  "company": {
+    "title": "The Company",
+    "subtitle": "Our history and mission",
+    "history_title": "Our History",
+    "history_p1": "The Compagnie des Oreilles was born from a shared passion for forgotten tales and the art of puppetry. Since 2010, we have been traveling the roads of France to share our unique universe.",
+    "history_p2": "Our shows combine object theater, table puppets, and traditional tales, revisited with a touch of modernity and humor.",
+    "history_p3": "We believe in the power of imagination to bring generations together and spark wonder, whatever the age."
   },
   "contact": {
     "title": "Contact Us",
-    "intro": "For any show request, quote or information, do not hesitate to write to us.",
+    "intro": "Do you have a question about our shows? Would you like to schedule a performance? Do not hesitate to send us a message via the form below.",
     "form": {
       "name": "Name",
       "email": "Email",
       "message": "Message",
       "send": "Send"
     },
-    "success": "Your message has been sent! We will reply as soon as possible.",
     "validation": {
       "name_required": "Name is required",
-      "email_invalid": "Invalid email address",
+      "email_invalid": "Email is invalid",
       "message_min": "Message must be at least 10 characters"
+    },
+    "success": "Your message has been sent successfully. We will reply as soon as possible."
+  },
+  "show": {
+    "audience": "Audience",
+    "panel_title": "Panel admin",
+    "company_name": "Cie des Oreilles",
+    "dashboard": "Dashboard",
+    "view_site": "View site",
+    "logout": "Logout",
+    "audience_value": "All public",
+    "duration": "Duration",
+    "director": "Director",
+    "about_title": "Synopsis",
+    "gallery": "Gallery",
+    "details": "Details",
+    "more_info": "More info",
+    "upcoming_dates": "Upcoming Performances",
+    "book": "Book",
+    "sold_out": "Sold Out",
+    "no_dates": "No dates scheduled for now.",
+    "book_tickets": "Book Tickets",
+    "next_date": "Next Date",
+    "featured": "Featured"
+  },
+  "backstage": {
+    "title": "Backstage",
+    "subtitle": "Discover the secrets of making our shows and the craftsmanship that brings our puppets to life.",
+    "filter": {
+      "all": "All",
+      "puppets": "Puppet Creation",
+      "decor": "Set Design",
+      "rehearsal": "Rehearsals"
+    }
+  },
+  "tickets": {
+    "title": "Tickets",
+    "subtitle": "Book your tickets for our upcoming shows.",
+    "info_title": "Booking Information",
+    "info_description": "For now, online ticketing is managed directly by the venues. You will find booking links on each show page or in the agenda. For any specific request, please do not hesitate to contact us.",
+    "contact_us": "Contact Us"
+  },
+  "news": {
+    "read_more": "Read more",
+    "title": "News",
+    "subtitle": "Follow the latest adventures of the company.",
+    "error": "An error occurred while loading news.",
+    "empty": "No news for now.",
+    "back": "Back to news"
+  },
+  "agenda": {
+    "title": "Agenda",
+    "error": "An error occurred while loading the agenda.",
+    "book": "Book",
+    "more_info": "More Info",
+    "empty": "No dates scheduled for now."
+  },
+  "admin": {
+    "news": "News",
+    "new_news": "New News",
+    "manage": "Manage",
+    "cancel": "Cancel",
+    "save": "Save",
+    "login_title": "Admin Login",
+    "soon": "Coming soon",
+    "validation": {
+      "title_required": "Title is required",
+      "email_invalid": "Email is invalid",
+      "password_min": "Password must be at least 6 characters"
+    }
+  },
+  "shows": {
+    "discover": "Discover",
+    "title": "Our Shows",
+    "subtitle": "Dive into the medieval and mischievous universe of our creations.",
+    "error": "An error occurred while loading shows.",
+    "empty": "No shows for now.",
+    "back": "Back to shows",
+    "next_dates": "Upcoming dates",
+    "contact_us": "Contact us for this show",
+    "filter": {
+      "all": "All Shows",
+      "touring": "Touring",
+      "past": "Past Creations"
     }
   },
   "seo": {
+    "default": {
+      "title": "Cie des Oreilles",
+      "description": "Puppet theater and tales."
+    },
     "home": {
       "title": "Home",
       "description": "Welcome to the Cie des Oreilles website. Discover our shows, our agenda and our news."
@@ -109,6 +179,14 @@
     "shows": {
       "title": "Shows",
       "description": "Discover the shows of the Cie des Oreilles."
+    },
+    "backstage": {
+      "title": "Backstage",
+      "description": "Discover the behind-the-scenes of the Cie des Oreilles."
+    },
+    "tickets": {
+      "title": "Tickets",
+      "description": "Information about tickets and bookings."
     }
   }
 }

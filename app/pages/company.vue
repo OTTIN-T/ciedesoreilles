@@ -10,7 +10,6 @@ useSeoMeta({
   description: () => t('seo.company.description'),
   ogTitle: () => `${t('seo.company.title')} - Cie des Oreilles`,
   ogDescription: () => t('seo.company.description'),
-  ogImage: '/og-image.png',
 })
 </script>
 
@@ -18,7 +17,7 @@ useSeoMeta({
   <div>
     <div class="bgprimary900 text-primary-50 py-12">
       <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">
+        <h1 class="text-4xl md:text-5xl  font-bold mb-4">
           {{ $t('company.title') }}
         </h1>
         <p class="text-xl text-primary-200 italic">
@@ -31,7 +30,7 @@ useSeoMeta({
 
     <section class="py-12 bg-white">
       <div class="container mx-auto px-4 max-w-4xl">
-        <h2 class="text-3xl font-serif font-bold text-primary-800 mb-6 text-center">
+        <h2 class="text-3xl  font-bold text-primary-800 mb-6 text-center">
           {{ $t('company.history_title') }}
         </h2>
         <div class="prose prose-lg prose-stone mx-auto font-body text-primary-700">

@@ -36,7 +36,8 @@ create table shows (
   title text not null,
   description text,
   image_url text,
-  slug text unique not null
+  slug text unique not null,
+  featured boolean default false
 );
 
 alter table shows enable row level security;

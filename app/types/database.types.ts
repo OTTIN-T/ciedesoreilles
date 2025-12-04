@@ -80,6 +80,7 @@ export interface Database {
           image_url: string | null
           slug: string
           title: string
+          featured: boolean
         }
         Insert: {
           audience?: string | null
@@ -90,6 +91,7 @@ export interface Database {
           image_url?: string | null
           slug: string
           title: string
+          featured?: boolean
         }
         Update: {
           audience?: string | null
@@ -100,6 +102,7 @@ export interface Database {
           image_url?: string | null
           slug?: string
           title?: string
+          featured?: boolean
         }
         Relationships: []
       }

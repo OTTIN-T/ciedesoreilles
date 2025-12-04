@@ -8,10 +8,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "debug": "nuxt dev --inspect",
+    "analyze": "nuxt analyze",
+    "cleanup": "nuxt cleanup",
+    "prepare": "nuxt prepare",
     "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.png",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "up:i": "pnpm upgrade -i"
   },
   "dependencies": {
     "@intlify/message-compiler": "^11.2.1",
@@ -35,6 +39,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
+    "@iconify-json/flag": "^1.2.10",
     "@iconify-json/heroicons": "^1.2.3",
     "@vite-pwa/assets-generator": "^1.0.2",
     "@vite-pwa/nuxt": "^1.0.7"

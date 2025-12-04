@@ -13,7 +13,6 @@ useSeoMeta({
   description: () => t('seo.agenda.description'),
   ogTitle: () => `${t('seo.agenda.title')} - Cie des Oreilles`,
   ogDescription: () => t('seo.agenda.description'),
-  ogImage: '/og-image.png',
 })
 
 const { data: agenda, pending, error } = await useAsyncData('agenda', async () => {
@@ -28,7 +27,7 @@ const { data: agenda, pending, error } = await useAsyncData('agenda', async () =
 
 <template>
   <div class="container mx-auto px-4 py-12">
-    <h1 class="text-4xl font-serif font-bold text-primary-800 mb-8 text-center">
+    <h1 class="text-4xl  font-bold text-primary-800 mb-8 text-center">
       {{ $t('agenda.title') }}
     </h1>
 
@@ -60,7 +59,7 @@ const { data: agenda, pending, error } = await useAsyncData('agenda', async () =
 
         <!-- Details -->
         <div class="grow">
-          <h3 class="text-xl font-serif font-bold text-primary-800 mb-1">
+          <h3 class="text-xl  font-bold text-primary-800 mb-1">
             {{ event.shows?.title }}
           </h3>
           <div class="flex items-center text-neutral-600 gap-2">

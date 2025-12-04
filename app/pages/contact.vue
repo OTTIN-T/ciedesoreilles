@@ -13,7 +13,6 @@ useSeoMeta({
   description: () => t('seo.contact.description'),
   ogTitle: () => `${t('seo.contact.title')} - Cie des Oreilles`,
   ogDescription: () => t('seo.contact.description'),
-  ogImage: '/og-image.png',
 })
 
 const loading = ref(false)
@@ -48,7 +47,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 <template>
   <div class="container mx-auto px-4 py-12 max-w-2xl">
-    <h1 class="text-4xl font-serif font-bold text-primary-800 mb-8 text-center">
+    <h1 class="text-4xl  font-bold text-primary-800 mb-8 text-center">
       {{ $t('contact.title') }}
     </h1>
 

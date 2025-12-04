@@ -54,7 +54,7 @@ useSeoMeta({
           }) }}</span>
         </div>
 
-        <h1 class="text-3xl md:text-5xl font-serif font-bold text-primary-900 mb-8">
+        <h1 class="text-3xl md:text-5xl  font-bold text-primary-900 mb-8">
           {{ news.title }}
         </h1>
 

@@ -47,11 +47,11 @@ const { data: news } = await useAsyncData(() => `news-page-${currentPage.value}`
   <div class="py-12 bgprimary950 min-h-screen textprimary50">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-serif font-bold textprimary100 mb-4 text-primary-500">
+        <h1 class="text-4xl md:text-6xl  font-bold textprimary100 mb-4 text-primary-500">
           {{
             $t('news.title') }}
         </h1>
-        <p class="text-xl textprimary300 font-sans max-w-2xl mx-auto">
+        <p class="text-xl textprimary300  max-w-2xl mx-auto">
           {{ $t('news.subtitle') }}
         </p>
       </div>

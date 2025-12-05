@@ -15,7 +15,12 @@
     "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.png",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "up:i": "pnpm upgrade -i"
+    "up:i": "pnpm upgrade -i",
+    "supabase:login": "supabase login",
+    "supabase:stop": "supabase stop",
+    "supabase:start": "supabase start",
+    "supabase:status": "supabase status",
+    "supabase:version": "supabase version"
   },
   "dependencies": {
     "@intlify/message-compiler": "^11.2.1",
@@ -42,6 +47,7 @@
     "@iconify-json/flag": "^1.2.10",
     "@iconify-json/heroicons": "^1.2.3",
     "@vite-pwa/assets-generator": "^1.0.2",
-    "@vite-pwa/nuxt": "^1.0.7"
+    "@vite-pwa/nuxt": "^1.0.7",
+    "supabase": "^2.65.6"
   }
 }

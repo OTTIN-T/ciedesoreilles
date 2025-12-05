@@ -17,7 +17,7 @@ const badge = computed(() => {
       color: 'primary' as const,
     }
   }
-  return {}
+  return undefined
 })
 </script>
 

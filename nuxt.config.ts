@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
-    '@vite-pwa/nuxt',
+    ...(process.env.VITEST === 'true' ? [] : ['@vite-pwa/nuxt']),
   ],
   devtools: {
     enabled: true,
